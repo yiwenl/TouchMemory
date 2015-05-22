@@ -5,7 +5,7 @@ html, body {
   padding: 0;
   overflow: hidden;
   position: static;
-  background: #000; }
+  background: #222222; }
 
 html {
   -webkit-text-size-adjust: none;
@@ -19,18 +19,14 @@ h1, h2, h3, h4, text, p {
 canvas {
   position: absolute;
   top: 0px;
-  left: 0px;
-}
-
+  left: 0px; }
 
 p {
   position: absolute;
-  left:50%;
-  top:50%;
-  padding:20px;
+  top: 0px;
+  left: 0px;
+  color: white;
   font-size: 20px;
-  letter-spacing: 1px;
+  padding: 20px;
   font-family: Verdana;
-  color:white;
-  transform:translate(-50%, -50%);
-}
+  letter-spacing: 1px; }

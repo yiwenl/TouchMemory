@@ -59,6 +59,10 @@ gulp.task('compile', function() {
 	.pipe(gulp.dest('./dist/bundle/'));
 });
 
+gulp.task('watch', function() {
+	gulp.watch('./src/scss/*.scss', ['sass']);
+});
+
 
 gulp.task('sass', function() {
 	return sass('./src/scss/main.scss') 
@@ -90,4 +94,4 @@ gulp.task('browser-sync', function() {
 	  });
 });
 
-gulp.task('default', ['browserify', 'browser-sync']);
+gulp.task('default', ['browserify', 'sass', 'browser-sync', 'watch']);

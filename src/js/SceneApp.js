@@ -27,7 +27,7 @@ p.render = function() {
 	GL.setMatrices(this.cameraOtho);
 	GL.rotate(this.rotationFront);
 
-	this._vTest.render();
+	// this._vTest.render();
 };
 
 module.exports = SceneApp;
