@@ -24,7 +24,7 @@ var BR = [275.272, 194.074, -52.8049];
 	}
 
 	var SceneApp = require("./SceneApp");
-	var numSlices = Math.floor(window.innerWidth/10);
+	var numSlices = Math.floor(window.innerWidth/5);
 
 	App = function() {
 		console.log('Num slices : ', numSlices);
@@ -116,7 +116,7 @@ var BR = [275.272, 194.074, -52.8049];
 		}
 
 		if(this.handX > -1) {
-			var maxDist = 20;
+			var maxDist = 128;
 			var handSlice = this.handX * numSlices;
 			for(var i=0; i<numSlices; i++) {
 				var dist = Math.abs(i - handSlice);
@@ -125,8 +125,9 @@ var BR = [275.272, 194.074, -52.8049];
 					offset = dist/maxDist;
 				}
 
-				var frame = Math.floor(offset * numSlices);
-				if(frame == numSlices) frame = numSlices-1;
+				// offset = Math.sin(offset * Math.PI * .5);
+				var frame = Math.floor(offset * (numSlices-1));
+				// if(frame == numSlices) frame = numSlices-1;
 
 				var v = this.captures[frame];
 				var wCanvas = v.width / numSlices;
